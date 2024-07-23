@@ -1,0 +1,1 @@
+This folder contains my first stage of projects that are done while learning HTML and CSS, this section will only have projects using these two technologies only.
