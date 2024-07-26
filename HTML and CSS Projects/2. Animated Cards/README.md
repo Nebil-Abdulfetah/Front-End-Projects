@@ -1,0 +1,1 @@
+This is the second project focused on using CSS flex-box and grid to create basic animated cards.
