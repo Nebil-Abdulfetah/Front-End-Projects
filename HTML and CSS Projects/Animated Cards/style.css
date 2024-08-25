@@ -1,0 +1,29 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    background-color: blue;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 2fr 1fr;
+    background-color: black;
+    
+}
+.card-header-img{
+    grid-column: 1/-1;
+    height: 200px;
+    width: 100%;
+}
+.card-header {
+    color: white;
+}
+.card-note{
+    grid-column: 1/-1;
+    color: white;
+}
