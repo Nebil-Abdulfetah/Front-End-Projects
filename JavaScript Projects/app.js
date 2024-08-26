@@ -21,4 +21,11 @@ addTask.addEventListener("click", () => {
     listContainer.append(newTask); //add the full task items inside the container
     
     task.value = ""; //clearing the form
+    deleteButton.addEventListener("click", ()=>{ //checking when the delete task button is clicked
+        while (newTask.hasChildNodes()) { 
+            newTask.removeChild(newTask.firstChild);
+          } //removing ever element of that task
+          newTask.style.display = "none"; //displaying as none to avoid any glitches
+    })
 })
+
