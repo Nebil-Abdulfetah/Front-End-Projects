@@ -3,12 +3,11 @@ body {
     padding: 0;
     height: 100vh;
     background-color: #FAFAFA;
-    /* text-align: center; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     font-family: sans-serif;
+}
+.form-container {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 .title {
     color: #26A69A;
@@ -38,11 +37,14 @@ body {
 #list-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
 }
 #list-container > div {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
     padding: .5em;
     color: black;
@@ -63,4 +65,12 @@ body {
 }
 #list-container button:hover {
     background-color: #D32F2F;
+}
+
+@media only screen and (max-width: 500px) {
+    #task {
+        display: block;
+        margin: 2rem auto;
+
+    }
 }
