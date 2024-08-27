@@ -9,20 +9,24 @@ addTask.addEventListener("click", createTask);
 
 
 function createTask() {
-    let newTask = document.createElement("div"); 
-    let deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "DELETE";
-    newTask.innerHTML = `<p> ${task.value} </p>`; 
-    newTask.append(deleteButton)            // creating the task element with its div inside it a paragraph and button
-    listContainer.append(newTask);           //add the full task items inside the container
-    task.value = "";                        //clearing the form
-   
-    //deleting functionality
-    deleteButton.addEventListener("click", ()=>{ //checking when the delete task button is clicked
-            while (newTask.hasChildNodes()) { 
-                newTask.removeChild(newTask.firstChild);
-        
-              }
-              newTask.style.display = "none"; //displaying as none to avoid any glitches
-        })
+    if (task.value !== "" && task.value !== " ") {
+        let newTask = document.createElement("div"); 
+        let deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "DELETE";
+        newTask.innerHTML = `<p> ${task.value} </p>`; 
+        newTask.append(deleteButton)            // creating the task element with its div inside it a paragraph and button
+        listContainer.append(newTask);           //add the full task items inside the container
+                               //clearing the form
+       
+        //deleting functionality
+        deleteButton.addEventListener("click", ()=>{ //checking when the delete task button is clicked
+                while (newTask.hasChildNodes()) { 
+                    newTask.removeChild(newTask.firstChild);
+            
+                  }
+                  newTask.style.display = "none"; //displaying as none to avoid any glitches
+            })
+    }
+    task.value = ""; 
+    
 }
